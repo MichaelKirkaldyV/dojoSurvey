@@ -8,12 +8,11 @@ def index():
 
 @app.route('/survey', methods=['POST']) 
 def survey():
-	print "Summary:"
 	name = request.form['name']
-	locations = request.form['locations']
-	languages = request.form['languages']
+	location = request.form['location']
+	language = request.form['language']
 	comments = request.form['comments']
-	return redirect('/') 
+	return render_template('survey.html', name=name, locations=location, languages=language, comments=comments) 
 
 
 app.run(debug=True) 
