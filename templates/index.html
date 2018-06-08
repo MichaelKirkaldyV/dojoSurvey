@@ -7,24 +7,34 @@
 	<body>
 		<div id="container">
 			<h1>Please fill out the following survey questions:</h1>
-			<form>
-				Your name:<input type="text" name="name">
-				Dojo location:<select>
-									<option>Chicago</option>
-									<option>San Francisco</option>
-									<option>Seattle</option>
-									<option>Los Angeles</option>
-							</select>
-				Favorite language:<select>
-										<option>Python</option>
-										<option>Ruby</option>
-										<option>JavaScript</option>
-										<option>Java</option>
-										<option>C#</option>
-						
+			<form action="/survey" method="post">
+				<div id="name">
+					Your name:<input type="text" name="name" class="input_name">
+				</div>
+				<div id="select1">
+					Dojo location:<select name="locations">
+										<option>Chicago</option>
+										<option>San Francisco</option>
+										<option>Seattle</option>
+										<option>Los Angeles</option>
 								</select>
-							Comments (optional):<textarea>Enter comments here...</textarea>
-							<input type="submit" name="Submit">
+				</div>
+				<div id="select2">
+					Favorite language:<select name="languages">
+											<option>Python</option>
+											<option>Ruby</option>
+											<option>JavaScript</option>
+											<option>Java</option>
+											<option>C#</option>
+									</select>
+				</div>
+							<label>
+								Comments (optional):
+							</label>
+							<textarea cols="50" rows="10" name="comments">Enter comments here...</textarea>
+							<div id="submit">
+							<input type="submit" name="Submit" class="submit">
+							</div>
 			</form>
 		</div>
 	</body>
